@@ -1,9 +1,10 @@
 import React from "react";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 function card() {
   return (
-    <div className="mx-auto w-[22rem]">
-      <div className="relative flex flex-row items-stretch w-full bg-white shadow-md rounded-lg h-max">
+    <div className="mx-auto px-[30px]">
+      <div className="max-w-[670px] grid md:grid-cols-2 grid-rows-2 bg-white shadow-md rounded-lg">
         <div className="flex justify-center ">
           <img
             className="rounded-l-lg"
@@ -11,7 +12,28 @@ function card() {
             alt="product image"
           />
         </div>
-        <div className="flex justify-center">chin</div>
+        <div className="flex flex-col px-10 py-6 ">
+          <span className="text-dark-grayish-blue font-Montserrat uppercase tracking-[0.25rem] py-2">
+            Perfume
+          </span>
+          <h2 className="text-very-dark-blue text-4xl font-Fraunces py-2">
+            Gabrielle Essence Eau De Parfum
+          </h2>
+          <p className="text-dark-grayish-blue text-base pt-2 font-Montserrat">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div className="flex flex-row py-8">
+            <p className="text-dark-cyan text-4xl font-Fraunces">$149.99</p>
+            <p className="flex items-center pl-5 text-dark-grayish-blue text-lg font-normal line-through">
+              $169.99
+            </p>
+          </div>
+          <button className="flex items-center justify-center w-full bg-dark-cyan text-cream rounded-lg py-3 hover:bg-dark-cyan-hover ">
+            <ShoppingCartIcon className="h-4 mr-4" />
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );
